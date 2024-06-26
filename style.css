@@ -1,0 +1,204 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+/* Header */
+
+
+.logo{
+  width: 80px;
+}
+
+.header {
+  position: fixed; /* Add this line */
+  top: 0; /* Add this line */
+  background-color: white; /* Add this line */
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+  width: 100%;
+  z-index: 1000; /* Add this line */
+  left: 0; /* Add this line to ensure it's positioned from the left edge */
+  height: 60px;
+}
+
+
+.nav-items{
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  align-items: center;
+  
+  margin-right: 10px;
+
+}
+
+.nav-items > a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav-items > a:visited{
+  color: blue;
+}
+
+.nav-items > a:active{
+  color:grey;
+}
+
+/* End Header */
+
+
+
+/* Body */
+
+    /* Card */
+
+    .card-container{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 10px;
+      justify-content: center;
+    }
+    .card{
+      height: 320px;
+      width: 270px;
+      border-radius: 5px;
+      background-color: rgb(237, 239, 240);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover{
+      border: 1px solid rgb(150, 146, 146);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    }
+    .card-info{
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    /* Card-Info */
+
+      .card-image{
+      width: 100%;
+      height: 182px;
+      object-fit: cover;
+      border-radius: 5px;
+      }
+
+      .card-name{
+        font-size: large;
+        font-weight: 500;
+      }
+      .card-desc{
+        display: flex;
+        align-items: center;
+        width: 180px;
+        height: 30px;
+        font-size: small;
+        color: rgb(107, 107, 107);
+      }
+
+      /* Card More Info */
+        .card-more-info{
+          display: flex;
+          margin-top: 15px;
+          justify-content: space-between;
+          font-size: small;
+          color: rgb(107, 107, 107);
+        }
+         
+
+
+.search-div{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  
+}
+
+.search-input {
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ff5000; /* Use border shorthand for consistency */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+.search-input::after{
+  background-color: aqua;
+}
+
+.search-btn{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 12px 24px;
+  border: 0;
+  color: #fff;
+  background: #ff5000;
+  line-height: 1.15;
+  font-size: 16px;
+}
+
+
+.sort-div{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.sort-by-rating-btn {
+  height: 30px;
+  padding: 5px;
+  background: rgb(238, 236, 236);
+  border: 1px solid #ff5000;
+  border-radius: 5px;
+  color: rgb(87, 84, 84);
+  cursor: pointer; /* Change cursor to pointer to indicate clickable */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+
+  /* Hover effect */
+  &:hover {
+    background-color: #ff5000;
+    color: white;
+  }
+
+  /* Clicked effect */
+  &:active {
+    transform: translateY(1px); /* Move button down slightly when clicked */
+  }
+}
+  
+
+
+
+.body{
+  padding-top: 60px;
+  height: 100%;
+  background-color: rgb(244, 245, 245);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Footer{
+  background-color: rgb(244, 245, 245);
+  height: 100px;
+  
+
+}
+
+
