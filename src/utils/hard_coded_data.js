@@ -1,59 +1,3 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client';
-import logo from './images/image.png';
-// import restimg from 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/';
-
-// // React Element
-
-// const heading = React.createElement(
-//   "h1",
-//   {id: "heading"},
-//   "Welcome Welcome Welcome!"
-// );
-
-
-
-// //JSX to create React Element
-
-// const jsxheading = (<h1>Hello!</h1>);
-// root.render(jsxheading);
-
-
-// // JSX React Componrny
-
-// const HeadingComponent = () => (
-//   <div className='head'>
-//     <Title />
-//     <h1 className='head-h1'> Hello Bois!</h1>
-//   </div>
-// );
-
-
-// Header
-const Title = () => (
-  <a href="/">
-    <img className="logo" src={logo} alt="Food Fire Logo" />
-  </a>
-);
-
-// Header component for header section: Logo, Nav Items
-const Header = () => {
-  return (
-    <div className="header">
-      <Title />
-      <div className="nav-items">
-        <a href='#'>Home</a>
-        <a href='#'>About</a>
-        <a href='#'>Contact Us</a>
-
-      </div>
-    </div>
-  );
-};
-
-
-//Resaurant List
-
 const restaurantList = [
   {
     "info": {
@@ -1886,75 +1830,9 @@ const restaurantList = [
       "type": "WEBLINK"
     }
   }
-]
-
-
-// Body
-
-
-const RestaurantCard = (props) => {
-  const {resData} = props
-
-  // const {cloudinaryImageId,name,cuisines,avgRating,deliveryTime,costForTwo}=resData?.data
-  return (
-    <div className='card'>
-      <img className='card-image' src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + resData.info.cloudinaryImageId}></img>
-      <div className='card-info'>
-          <div className='card-name'> {resData.info.name} </div>
-          <div className='card-desc'> {resData.info.cuisines.join(", ")}</div>
-          <div className='card-more-info'>
-            <div className='rating'>{resData.info.avgRating}⭐️</div>
-            {/* <div className='dot'>•</div> */}   
-            <div className='time'>{resData.info.sla.slaString}</div>
-            {/* <div className='dot'>•</div> */}
-            <div className='cost-for-two'>{resData.info.costForTwo}</div>
-
-          </div>
-      </div>
-      
-    </div>
-  );
-};
-const Body = () => {
-  return (
-    <div className='body'>
-      <div className="search-bar"> Search</div>
-
-      <div className="card-container">
-
-
-        
-        { //JS Code
-        restaurantList.map((restaurant) => 
-        <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
-        )
-        }
-        
-
-        
-      </div>
-    </div>
-    
-  );
-};
-
-// Footer
+];
 
 
 
 
-
-
-
-
-const AppLayout = () => {
-  return (
-    <React.Fragment>
-      <Header />
-      <Body />
-    </React.Fragment>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default restaurantList;
